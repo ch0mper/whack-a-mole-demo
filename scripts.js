@@ -38,11 +38,11 @@ startGame = () => {
   scoreBoard.textContent = 0;
   score = 0;
   timeUp = false;
-  holes.forEach(hole => hole.classList.remove('up'))
+  holes.forEach(hole => hole.style.display = 'block');
   molePeep();
   setTimeout(() => {
     timeUp = true;
-    holes.forEach(hole => hole.classList.add('up'));
+    holes.forEach(hole => hole.style.display = 'none');
   }, 10000);
 }
 
